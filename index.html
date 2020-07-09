@@ -1,0 +1,103 @@
+<!-- html:5 for template -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bennetts website</title>
+    <link rel="stylesheet" type="text/css"
+     href="main.css">
+     <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="navWrap">
+            <div class="leftSideNav">
+                <div class="navLinkWrapper">
+                    <a href="Gallery.html">Gallery</a>
+                </div>
+                <div class="navLinkWrapper">
+                    <a href="AboutMe.html">About me</a>
+                </div>
+                <div class="navLinkWrapper">
+                    <a href="Artwork.html">Artwork</a>
+                </div>
+            </div>
+
+            <div class="centreNav">
+                <div class="brand">
+                    <div>Bennett</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="contentWrapper">
+        <div class="imageItemsWrapper">
+        
+            <div class="singleImageItemWrapper">
+                <div class="singleImageBackground" style="background-image:url(images/Camera1.jpg)"></div>
+            
+                <div class="imageTextWrapper">
+                    <div class="logoWrapper">
+                        <a href="Gallery.html"><img src="Logo/CameraLogo.png">
+                        </a>
+                    </div>
+
+                    <div class="subtitle">
+                        Gallery
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="singleImageItemWrapper">
+                <div class="singleImageBackground" style="background-image:url(images/AboutMe.jpg)"></div>
+            
+                <div class="imageTextWrapper">
+                    <div class="logoWrapper">
+                        <a href="AboutMe.html"><img src="Logo/NotePad.png">
+                        </a>
+                    </div>
+
+                    <div class="subtitle">
+                        About Me
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="singleImageItemWrapper">
+                <div class="singleImageBackground" style="background-image:url(images/Pencil.jpg)"></div>
+            
+                <div class="imageTextWrapper">
+                    <div class="logoWrapper">
+                        <a href="Artwork.html"><img src="Logo/Pencil.png">
+                        </a>
+                    </div>
+
+                    <div class="subtitle">
+                        Artwork
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const singleImageItems = document.querySelectorAll('.singleImageItemWrapper')
+
+    singleImageItems.forEach(singleImageItem => {
+        singleImageItem.addEventListener('mouseover', () => {
+            singleImageItem.childNodes[1].classList.add('img-darken')
+        })
+
+        singleImageItem.addEventListener('mouseout', () => {
+            singleImageItem.childNodes[1].classList.remove('img-darken')
+        })
+    })
+</script>
+</html>
